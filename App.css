@@ -1,0 +1,46 @@
+.App {
+  text-align: center;
+}
+
+#loginform{
+	height: 200px;
+}
+
+.myButton {
+	background-color:#0000FF;
+	border-radius:28px;
+	border:1px solid #18ab29;
+	display:inline-block;
+	cursor:pointer;
+	color:#ffffff;
+	font-family:cursive;
+	font-size:17px;
+	padding:17px 40px;
+	text-decoration:none;
+	text-shadow:0px 1px 0px #2f6627;
+	margin-top: 8px;
+}
+.myButton:hover {
+	background-color:#1f2055;
+}
+.myButton:active {
+	position:relative;
+	top:1px;
+}
+body
+{
+	width: 400px !important;
+	min-height: 200px !important;
+}
+.alert
+{
+	display: none;
+	margin-top: 10px;
+	font-size: 30px;
+	font-family: cursive;
+}
+
+
+
+
+
