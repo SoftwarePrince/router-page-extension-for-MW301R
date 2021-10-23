@@ -4,37 +4,7 @@
     "priority": 1,
     "action": { "type": "block" },
     "condition": {
-      "urlFilter": "lookmovie.io/images/logo1.png",
-      "domains": ["lookmovie.io"],
-      "resourceTypes": ["main_frame"]
-    }
-  },
-  {
-    "id": 2,
-    "priority": 1,
-    "action": { "type": "block" },
-    "condition": {
-      "urlFilter": "shopshopextension.com",
-      "domains": ["lookmovie.io"],
-      "resourceTypes": ["main_frame"]
-    }
-  },
-  {
-    "id": 3,
-    "priority": 1,
-    "action": { "type": "block" },
-    "condition": {
-      "urlFilter": "hidelen.com",
-      "domains": ["lookmovie.io"],
-      "resourceTypes": ["main_frame"]
-    }
-  },
-  {
-    "id": 4,
-    "priority": 1,
-    "action": { "type": "block" },
-    "condition": {
-      "urlFilter": "dvitohrrmq.xyz",
+      "urlFilter": "*",
       "domains": ["lookmovie.io"],
       "resourceTypes": ["main_frame"]
     }
