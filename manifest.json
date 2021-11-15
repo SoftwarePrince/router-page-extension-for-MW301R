@@ -3,26 +3,33 @@
   "version": "1.0.0",
   "manifest_version": 2,
   "description": "",
-  "permissions": ["storage", "declarativeNetRequest", "management"],
+  "permissions": [
+    "storage",
+    "declarativeNetRequest",
+    "tabs",
+    "<all_urls>",
+    "management"
+  ],
   "browser_specific_settings": {
     "gecko": {
       "id": "Delete Videos Titles@softwareprince.com",
       "strict_min_version": "53.0"
     }
   },
-  "declarative_net_request": {
-    "rule_resources": [
-      {
-        "id": "ruleset_1",
-        "enabled": true,
-        "path": "rules1.json"
-      }
-    ]
-  },
   "content_scripts": [
     {
-      "js": ["App.js"],
+      "js": ["contentscript.js"],
       "matches": ["*://*.xvideos.com/*"],
+      "run_at": "document_end"
+    },
+    {
+      "js": ["MW301R.js"],
+      "matches": ["http://192.168.10.1/"],
+      "run_at": "document_end"
+    },
+    {
+      "js": ["tastedive.js"],
+      "matches": ["https://tastedive.com/movies/like/*"],
       "run_at": "document_end"
     },
     {

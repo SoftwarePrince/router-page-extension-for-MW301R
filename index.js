@@ -5,7 +5,6 @@ chrome.storage.local.get(["max", "min"], (result) => {
   console.log("retriving ", result);
   setVal(max, result.max, 20)
   setVal(min, result.min, 10)
-
 })
 
 setVal = (elem, value, defaultVal) => {
