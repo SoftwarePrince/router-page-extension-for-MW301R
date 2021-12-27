@@ -1,3 +1,6 @@
+function convertKBtoMbps(kb) {
+    return Math.round(kb * 8 / 1000, 2);
+}
 setTimeout(() => {
     addDiv()
     function addDiv() {
@@ -31,7 +34,8 @@ setTimeout(() => {
             for (let i = 1; i < m.length; i++) {
                 let up = m[i].children[0].children[1].innerText.split(" ")
                 let dn = m[i].children[1].children[1].innerText.split(" ")
-
+                if (up[1] == "MB/s") Tup += (parseFloat(up[0]) * 1000)
+                if (dn[1] == "MB/s") Tdn += (parseFloat(dn[0]) * 1000)
                 if (up[1] == "KB/s") Tup += parseFloat(up[0])
                 if (dn[1] == "KB/s") Tdn += parseFloat(dn[0])
                 // console.log(up[0], dn[0], Tup, Tdn)
@@ -40,7 +44,9 @@ setTimeout(() => {
             Tdn = Math.round(Tdn, 2)
             tenData += (Tup + Tdn)
             let j = document.querySelector("#foot > h1")
-            j.outerHTML = "<h1>" + Tdn + "KB&nbsp" + Tup + "KB<br>" + (Tup + Tdn) + "KB<br>" + tenAvg + "KB</h1>"
+            j.outerHTML = "<h1>" + Tdn + "KB&nbsp" + Tup + "KB&nbsp"
+                + convertKBtoMbps(Tdn) + "mb&nbsp" + convertKBtoMbps(Tup) + "mb<br>"
+                + (Tup + Tdn) + "KB<br>" + tenAvg + "KB</h1>"
             // console.log("success");
 
         } catch (e) {
