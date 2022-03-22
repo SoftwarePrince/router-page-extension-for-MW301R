@@ -44,9 +44,11 @@ setTimeout(() => {
             Tdn = Math.round(Tdn, 2)
             tenData += (Tup + Tdn)
             let j = document.querySelector("#foot > h1")
-            j.outerHTML = "<h1>" + Tdn + "KB&nbsp" + Tup + "KB&nbsp"
-                + convertKBtoMbps(Tdn) + "mb&nbsp" + convertKBtoMbps(Tup) + "mb<br>"
-                + (Tup + Tdn) + "KB<br>" + tenAvg + "KB</h1>"
+            j.outerHTML = "<h1>dn "
+                + convertKBtoMbps(Tdn) + "mb&nbsp" + Tdn + "KB&nbsp"
+                + convertKBtoMbps(Tup) + "mb&nbsp" + Tup + "KB<br>"
+                + (Tup + Tdn) + "KB<br>"
+                + tenAvg + "KB</h1>"
             // console.log("success");
 
         } catch (e) {
